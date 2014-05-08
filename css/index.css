@@ -257,6 +257,20 @@ cite:before {
 a {
   color: steelblue; }
 
+.visibility {
+  margin-top: 0; }
+
+.hidenotes {
+  display: none; }
+
+li:hover .hidenotes {
+  display: block;
+  margin-top: 0;
+  font-size: inherit;
+  background-color: #DEDEDE;
+  padding: 5px;
+  font-weight: normal; }
+
 .object object, .object .img {
   height: 100%;
   width: 100%; }

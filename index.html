@@ -373,6 +373,85 @@ overflow:hidden; ">
     </section>
 </div>
 
+
+
+<!--YSLOW -->
+<div class="slide normal">
+     <header>
+      <h1>YSLOW<img src="img/yslow.png" alt="" style="vertical-align:middle;  margin-left: 20px;"></h1>
+     </header>
+     <section>
+     <ul class="visibility">
+<li>Make fewer HTTP requests
+<p class="hidenotes">Decreasing the number of components on a page reduces the number of HTTP requests required to render the page, resulting in faster page loads. Some ways to reduce the number of components include: combine files, combine multiple scripts into one script, combine multiple CSS files into one style sheet, and use CSS Sprites and image maps.</p></li>
+
+<li>Avoid empty src or href
+<p class="hidenotes">You may expect a browser to do nothing when it encounters an empty image src. However, it is not the case in most browsers. IE makes a request to the directory in which the page is located; Safari, Chrome, Firefox 3 and earlier make a request to the actual page itself. This behavior could possibly corrupt user data, waste server computing cycles generating a page that will never be viewed, and in the worst case, cripple your servers by sending a large amount of unexpected traffic.</p></li>
+
+<li>Compress components with gzip
+<p class="hidenotes">Compression reduces response times by reducing the size of the HTTP response. Gzip is the most popular and effective compression method currently available and generally reduces the response size by about 70%. Approximately 90% of today's Internet traffic travels through browsers that claim to support gzip.</p></li>
+
+
+<li>Put CSS at top
+<p class="hidenotes">Moving style sheets to the document HEAD element helps pages appear to load quicker since this allows pages to render progressively.</p></li>
+
+<li>Put JavaScript at bottom
+ <p class="hidenotes">JavaScript scripts block parallel downloads; that is, when a script is downloading, the browser will not start any other downloads. To help the page load faster, move scripts to the bottom of the page if they are deferrable.</p></li>
+
+
+
+<li>Reduce DNS lookups
+<p class="hidenotes">The Domain Name System (DNS) maps hostnames to IP addresses, just like phonebooks map people's names to their phone numbers. When you type URL www.yahoo.com into the browser, the browser contacts a DNS resolver that returns the server's IP address. DNS has a cost; typically it takes 20 to 120 milliseconds for it to look up the IP address for a hostname. The browser cannot download anything from the host until the lookup completes.
+</p></li>
+
+<li>Minify JavaScript and CSS
+<p class="hidenotes">
+Minification removes unnecessary characters from a file to reduce its size, thereby improving load times. When a file is minified, comments and unneeded white space characters (space, newline, and tab) are removed. This improves response time since the size of the download files is reduced.
+</p></li>
+
+<li>Avoid URL redirects
+<p class="hidenotes">
+URL redirects are made using HTTP status codes 301 and 302. They tell the browser to go to another location. Inserting a redirect between the user and the final HTML document delays everything on the page since nothing on the page can be rendered and no components can be downloaded until the HTML document arrives.
+</p></li>
+
+<li>Remove duplicate JavaScript and CSS
+<p class="hidenotes">
+Duplicate JavaScript and CSS files hurt performance by creating unnecessary HTTP requests (IE only) and wasted JavaScript execution (IE and Firefox). In IE, if an external script is included twice and is not cacheable, it generates two HTTP requests during page loading. Even if the script is cacheable, extra HTTP requests occur when the user reloads the page. In both IE and Firefox, duplicate JavaScript scripts cause wasted time evaluating the same scripts more than once. This redundant script execution happens regardless of whether the script is cacheable.
+</p></li>
+<li> Reduce the number of DOM elements
+<p class="hidenotes">
+A complex page means more bytes to download, and it also means slower DOM access in JavaScript. Reduce the number of DOM elements on the page to improve performance.</p>
+</li>
+
+<li>Avoid HTTP 404 (Not Found) error
+<p class="hidenotes">Making an HTTP request and receiving a 404 (Not Found) error is expensive and degrades the user experience. Some sites have helpful 404 messages (for example, "Did you mean ...?"), which may assist the user, but server resources are still wasted.</p></li>
+
+
+
+<li>Do not scale images in HTML
+ <p class="hidenotes">Web page designers sometimes set image dimensions by using the width and height attributes of the HTML image element. Avoid doing this since it can result in images being larger than needed. For example, if your page requires image myimg.jpg which has dimensions 240x720 but displays it with dimensions 120x360 using the width and height attributes, then the browser will download an image that is larger than necessary.</p></li>
+
+<li>Make favicon small and cacheable
+<p class="hidenotes">A favicon is an icon associated with a web page; this icon resides in the favicon.ico file in the server's root. Since the browser requests this file, it needs to be present; if it is missing, the browser returns a 404 error (see "Avoid HTTP 404 (Not Found) error" above). Since favicon.ico resides in the server's root, each time the browser requests this file, the cookies for the server's root are sent. Making the favicon small and reducing the cookie size for the server's root cookies improves performance for retrieving the favicon. Making favicon.ico cacheable avoids frequent requests for it.
+</p>
+</li>
+
+<li>Avoid CSS expressions
+<p class="hidenotes">CSS expressions (supported in IE beginning with Version 5) are a powerful, and dangerous, way to dynamically set CSS properties. These expressions are evaluated frequently: when the page is rendered and resized, when the page is scrolled, and even when the user moves the mouse over the page. These frequent evaluations degrade the user experience.
+</p></li>
+
+
+<li> Avoid AlphaImageLoader filter
+ <p class="hidenotes">The IE-proprietary AlphaImageLoader filter attempts to fix a problem with semi-transparent true color PNG files in IE versions less than Version 7. However, this filter blocks rendering and freezes the browser while the image is being downloaded. Additionally, it increases memory consumption. The problem is further multiplied because it is applied per element, not per image.
+</p>
+</li>
+
+</ul>
+     <footer>Click item for more info. Link: <a href="http://developer.yahoo.com/yslow/">YSlow</a></footer>
+     </section>
+    </div>
+
+
 <div class="slide">
   <header><h1>Improve performance</h1></header>
     <section class="content">
