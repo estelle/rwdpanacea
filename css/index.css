@@ -341,7 +341,12 @@ a {
 .tweet iframe {
   margin: 100px auto 0 !important;
   font-size: 1.2rem;
-  -webkit-transform: scale(1.65); }
+  -webkit-transform: scale(1.65);
+  transform: scale(1.65); }
+
+.tweetparent iframe {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3); }
 
 div .slash {
   font-size: 4rem;
