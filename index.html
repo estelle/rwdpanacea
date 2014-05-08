@@ -9,7 +9,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 Based on: http://estelle.github.com/rwdpanacea
 -->
 <link rel="stylesheet" href="css/index.css">
-<meta name="twitter:widgets:link-color" content="#cc0000">
+<meta name="twitter:widgets:link-color" content="#4682B4">
 <meta name="twitter:widgets:theme" content="light">
 <style>
 
@@ -76,7 +76,7 @@ Based on: http://estelle.github.com/rwdpanacea
 <div class="slide">
   <header><h1></h1></header>
     <section class="content">
-      <p>"The principles of universality of access irrespective of <strong class="hilite">hardware</strong> or software platform, network infrastructure, language, culture, geographical location, or physical or mental impairment are core values in Web design"</p>
+      <p>"The principles of universality of access irrespective of <strong class="hilite">hardware</strong> or software platform, <strong class="hilite">network</strong> infrastructure, language, culture, <strong class="hilite">geographical location</strong>, or physical or mental <strong class="hilite">impairment</strong> are core values in Web design"</p>
       <p>&mdash; <a href="http://www.w3.org/DesignIssues/old/Architecture.html">Tim Berners-Lee</a>, Sept. 1998</p>
     </section>
 </div>
@@ -140,14 +140,7 @@ Responsive design is an approach to web page creation that makes use of flexible
 
 
 
-<!--
-<div class="slide">
-  <header><h1>Responsive Web Design</h1></header>
-    <section class="content"  style="font-size: 1.5rem">To see RWD in action, open a responsive site in a desktop browser and slowly make the browser thinner and wider. The layout magically adjusts itself to more comfortably fit the new width of the browser, even if you make the page as skinny as the resolution of a mobile phone.
-      <cite><a href="http://google.com">Google</a></cite>
-    </section>
-</div>
--->
+
 
 <!-- mediaqueri.es -->
  <div class="slide" style="padding:0; overflow:hidden;">
@@ -155,7 +148,7 @@ Responsive design is an approach to web page creation that makes use of flexible
 width: 940px;
 overflow:hidden; ">
      </object>
-  <a href="http://mediaqueri.es/" target="play" class="objectlink">Open in separate window</a>
+  <a href="http://mediaqueri.es/" target="play" class="objectlink">MediaQueri.es</a>
 </div>
 <!--
 <div class="slide object resize">
@@ -259,8 +252,17 @@ overflow:hidden; ">
 
 
 
+
 <div class="slide">
-  <header><h1 class="slash">&nbsp; &nbsp; &nbsp; &nbsp; Squishy!!!</h1></header>
+  <header><h1>Responsive Web Design</h1></header>
+    <section class="content"  style="font-size: 1.5rem">To see RWD in action, open a responsive site in a desktop browser and slowly make the browser thinner and wider. The layout magically adjusts itself to more comfortably fit the new width of the browser, even if you make the page as skinny as the resolution of a mobile phone.
+      <cite><a href="http://google.com">Google</a></cite>
+    </section>
+</div>
+
+
+<div class="slide">
+  <header><h1 class="slash">Squishy!!!</h1></header>
     <section class="content"><a href="http://twitter.com/snugug">@snugug</a>
     </section>
 </div>
@@ -284,7 +286,7 @@ overflow:hidden; ">
           <tr>
             <th></th>
             <th>Wide / Desktop</th>
-            <th>Narrow / Mobile</th>
+            <th>Narrow / WiFi</th>
           </tr>
         </thead>
         <tbody>
@@ -362,16 +364,9 @@ overflow:hidden; ">
 
 <div class="slide object">
   <object data="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0"></object>
-  <a href="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0" target="play" class="objectlink">Open in separate window</a>
+  <a href="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0" target="play" class="objectlink">WebPageTest.org</a>
 </div>
 
-
-
-<div class="slide">
-  <header><h1 class="slash" style="text-align: center;">Responsive &nbsp;&nbsp;Images</h1></header>
-    <section class="content"><p>It's more than just making them squishy!</p>
-    </section>
-</div>
 
 
 
@@ -382,7 +377,7 @@ overflow:hidden; ">
      </header>
      <section>
      <ul class="visibility">
-<li>Make fewer HTTP requests
+<li><strong class="hilite">Make fewer HTTP requests</strong>
 <p class="hidenotes">Decreasing the number of components on a page reduces the number of HTTP requests required to render the page, resulting in faster page loads. Some ways to reduce the number of components include: combine files, combine multiple scripts into one script, combine multiple CSS files into one style sheet, and use CSS Sprites and image maps.</p></li>
 
 <li>Avoid empty src or href
@@ -400,7 +395,7 @@ overflow:hidden; ">
 
 
 
-<li>Reduce DNS lookups
+<li><strong class="hilite">Reduce DNS lookups</strong>
 <p class="hidenotes">The Domain Name System (DNS) maps hostnames to IP addresses, just like phonebooks map people's names to their phone numbers. When you type URL www.yahoo.com into the browser, the browser contacts a DNS resolver that returns the server's IP address. DNS has a cost; typically it takes 20 to 120 milliseconds for it to look up the IP address for a hostname. The browser cannot download anything from the host until the lookup completes.
 </p></li>
 
@@ -428,7 +423,7 @@ A complex page means more bytes to download, and it also means slower DOM access
 
 
 
-<li>Do not scale images in HTML
+<li><strong class="hilite">Do not scale images in HTML</strong>
  <p class="hidenotes">Web page designers sometimes set image dimensions by using the width and height attributes of the HTML image element. Avoid doing this since it can result in images being larger than needed. For example, if your page requires image myimg.jpg which has dimensions 240x720 but displays it with dimensions 120x360 using the width and height attributes, then the browser will download an image that is larger than necessary.</p></li>
 
 <li>Make favicon small and cacheable
@@ -452,11 +447,21 @@ A complex page means more bytes to download, and it also means slower DOM access
     </div>
 
 
+
+
+<div class="slide">
+  <header><h1 class="slash">Responsive &nbsp;&nbsp;Images</h1></header>
+    <section class="content"><p>It's more than just making them squishy!</p>
+    </section>
+</div>
+
+
+
 <div class="slide">
   <header><h1>Improve performance</h1></header>
     <section class="content">
       <ol>
-        <li>Decrease file size: decrease bytes by 70+%:
+        <li>Decrease file size: easily decrease bytes by 70+%:
           <ul>
             <li>Compress all images</li>
             <li>GZip everything</li>
@@ -494,10 +499,127 @@ A complex page means more bytes to download, and it also means slower DOM access
     </section>
 </div> -->
 
+
+<div class="slide object resize">
+  <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
+  <section>
+  <object data="cc.svg">
+<!--[if lte IE 8]>
+<img src="images/medium.png" alt="Fall back for IE">
+<![endif]-->
+</object>
+<pre>
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 329&quot;
+  preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;
+ &lt;title&gt;Clown Car&lt;/title&gt;
+ &lt;style&gt;
+  svg {
+    background-size: 100% 100%; background-repeat: no-repeat;
+  }
+ @media screen and (max-width: 400px) {
+  svg {background-image: url(images/small.png&quot;);}
+ }
+ @media screen and (min-width: 401px) and (max-width: 700px) {
+  svg {background-image: url(images/medium.png);}
+ }
+ @media screen and (min-width: 701px) and (max-width: 1000px) {
+  svg {background-image: url(images/big.png);}
+ }
+ @media screen and (min-width: 1001px) {
+  svg {background-image: url(images/huge.png);}
+ }
+ &lt;/style&gt;
+&lt;/svg&gt;</pre>
+  </section>
+ </div>
+
+ <div class="slide resizeimg">
+   <header><h1>Right-size your images</h1></header>
+     <section class="content">
+
+      <p>Scaled: 1,850 milliseconds</p>
+      <img src="img/bad-trimmed-2_resize_image.png">
+
+      <p>Right-sized: 625 milliseconds</p>
+      <img src="img/good-trimmed-2_resize_image.png">
+<ul>
+  <li>blue = CPU used to decode</lu>
+    <li>green = FPS (more is better)</li>
+    <li>purple = rendering</li>
+  </ul>
+  <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
+     </section>
+ </div>
+
+
+<div class="slide">
+  <header><h1 class="slash">Make fewer <br/>HTTP requests</h1></header>
+    <section class="content">
+    </section>
+</div>
+
+<div class="slide">
+    <header>
+      <h1>Latency</h1>
+    </header>
+    <section>
+        <img src="img/latency.gif" style="margin: 40px auto; box-shadow: none;" alt="Computer asks DNS server for IP address, then goes to IP to get website">
+        <ul>
+            <li><strong>Issue:</strong> Requests take longer to complete</li>
+            <li><strong>Solution:</strong> Reducing requests improves performance</li>
+
+        </ul>
+    </section></div>
+
+
+
 <div class="slide tweet tweetparent">
   <blockquote class="twitter-tweet" lang="en"><p>As ISPs promote ever faster download speeds, remember latency is the real performance killer <a href="https://twitter.com/search?q=%23perfmatters&amp;src=hash">#perfmatters</a> <a href="http://t.co/hfoYvHANQb">pic.twitter.com/hfoYvHANQb</a></p>&mdash; Andy Davies (@AndyDavies) <a href="https://twitter.com/AndyDavies/statuses/459716093993447424">April 25, 2014</a></blockquote>
 </div>
 
+    <div class="slide">
+      <header><h1>Yes, you want to...</h1></header>
+        <section class="content">
+          <ol>
+            <li>Make the site squishy</li>
+            <li>Reduce http requests / latency</li>
+            <li>Reduce weight of page</li>
+            <li>Improve typography</li>
+            <li>Serve the right size images</li>
+            <li>Design mobile first</li>
+          </ol>
+
+        </section>
+    </div>
+
+    <div class="slide">
+      <header><h1>... but also consider ...</h1></header>
+        <section class="content">
+          <ol>
+            <li>latency</li>
+            <li>memory</li>
+            <li>battery</li>
+            <li>responsiveness</li>
+          </ol>
+        </section>
+    </div>
+ <div class="slide resizeimg">
+   <header><h1>CPU used to decode images</h1></header>
+     <section class="content">
+
+      <p>Scaled: 1,850 milliseconds</p>
+      <img src="img/bad-trimmed-2_resize_image.png">
+
+      <p>Right-sized: 625 milliseconds</p>
+      <img src="img/good-trimmed-2_resize_image.png">
+<ul>
+  <li>blue = CPU used to decode</lu>
+    <li>green = FPS (more is better)</li>
+    <li>purple = rendering</li>
+  </ul>
+  <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
+     </section>
+ </div>
 
 
 <div class="slide tweet">
@@ -507,6 +629,21 @@ A complex page means more bytes to download, and it also means slower DOM access
 
 <div class="slide tweet">
   <blockquote class="twitter-tweet" lang="en"><p>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</p>&mdash; Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/statuses/463069042182332416">May 4, 2014</a></blockquote>
+</div>
+
+
+<div class="slide resizeimg">
+  <header><h1>CSS Animation, not JavaScript</h1></header>
+    <section class="content">
+
+      <p style="margin-top:0">JavaScript Animation</p>
+      <img src="img/bad-trimmed-small_anim.png">
+
+      <p>CSS3 Animation</p>
+      <img src="img/good-trimmed-small_anim.png">
+    <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
+
+    </section>
 </div>
 
 

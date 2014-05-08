@@ -271,6 +271,9 @@ li:hover .hidenotes {
   padding: 5px;
   font-weight: normal; }
 
+.resizeimg img {
+  width: 100%; }
+
 .object object, .object .img {
   height: 100%;
   width: 100%; }
@@ -365,7 +368,8 @@ li:hover .hidenotes {
 div .slash {
   font-size: 4rem;
   -webkit-transform: rotate(-10deg);
-  margin-top: 150px; }
+  margin-top: 150px;
+  text-align: center; }
 
 .wholepoint {
   position: absolute;
