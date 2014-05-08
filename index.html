@@ -119,7 +119,7 @@ Based on: http://estelle.github.com/rwdpanacea
 
 <div class="slide">
   <header><h1 class="slash">Responsive Design</h1></header>
-    <section class="content">
+    <section class="content"><img src="http://www.flexiblewebbook.com/images/cover.jpg" style="height: 220px; float: right;">
     </section>
 </div>
 
@@ -239,8 +239,8 @@ overflow:hidden; ">
 <div class="slide">
   <header><h1>Size matters</h1></header>
     <section class="content"><blockquote><p>According to the HTTP Archive, the average top 1,000 web page is 1246 KB, compared to 828 KB in May 2012. This represents a 50% rate of growth in just one year.</p>
-    <p>The average web page has almost doubled in size since 2010</p>
-      <cite><a href="https://twitter.com/tameverts">Tammy Everts</a></blockquote>
+    <p>The average web page has almost doubled in size since 2010.</p>
+      <cite><a href="https://twitter.com/tameverts">Tammy Everts (2013)</a></blockquote>
 
     </section>
 </div>
@@ -500,7 +500,7 @@ A complex page means more bytes to download, and it also means slower DOM access
 </div> -->
 
 
-<div class="slide object resize">
+<div class="slide object resize resize2">
   <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
   <section>
   <object data="cc.svg">
@@ -533,7 +533,7 @@ A complex page means more bytes to download, and it also means slower DOM access
   </section>
  </div>
 
- <div class="slide resizeimg">
+ <div class="slide resize resizeimg">
    <header><h1>Right-size your images</h1></header>
      <section class="content">
 
@@ -551,6 +551,15 @@ A complex page means more bytes to download, and it also means slower DOM access
      </section>
  </div>
 
+<div class="slide object resize resize2">
+  <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
+  <section>
+  <object data="cc2.svg">
+<!--[if lte IE 8]>
+<img src="images/medium.png" alt="Fall back for IE">
+<![endif]-->
+</object>
+</div>
 
 <div class="slide">
   <header><h1 class="slash">Make fewer <br/>HTTP requests</h1></header>
@@ -622,10 +631,68 @@ A complex page means more bytes to download, and it also means slower DOM access
  </div>
 
 
-<div class="slide tweet">
-<blockquote class="twitter-tweet" lang="en"><p>Load times on mobile have improved drastically by moving from client-side to server-side JavaScript logic for injecting content. <a href="https://twitter.com/search?q=%23nodejs&amp;src=hash">#nodejs</a> ❤</p>&mdash; Web Platform Daily (@openwebdaily) <a href="https://twitter.com/openwebdaily/statuses/458146923221102594">April 21, 2014</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="slide normal">
+     <section class="content">
+
+
+<h2>JavaScript</h2>
+<ul class="">
+<li><em>Render cost:</em> JS (and CSS <strong title="can be as expensive to render as">and images</strong>)</li>
+<li>JS (download, parsing &amp; executing) </li>
+<li><em title="(like XMLHttpRequest)">Dynamic JS:</em> ⬆ rendering cost (can't be cached). </li>
+<li>AJAX: waking up the radio communications</li>
+</ul>
+<!--<h2>Images</h2>
+<ul>
+<li>Consume energy</li>
+<li>Rendering energy is proportional to # and size of images.</li>
+</ul>-->
+    </section>
 </div>
+
+<div class="slide">
+  <header><h1>JavaScript!</h1></header>
+    <section class="content">
+<ul>
+<li>All scripts loaded and parsed (even if not used)</li>
+<li>Reduce JS to only what is needed</li>
+<li>Are libraries really necessary?
+<ul>
+  <li>Include only functions used by page to reduces
+
+energy use.</li>
+  <li>Goal of most: equalize across browsers <br> (not necessry in mobile space)</li>
+<li>Libraries simplify web
+
+development, but increase energy use.</li>
+<li><a href="http://estelle.github.com/jsframeworks">You don't need a framework for that</a></li></ul></li></ul>
+   </section>
+ </div>
+
+
+<!-- Battery consumption -->
+<div class="slide" style="background-image:url(images/batteries.jpg); background-size: cover;">
+     <header>
+      <h1 style="color: #ffffff;">Battery Consumption</h1>
+     </header>
+     <section>
+     <div style="background-color: rgba(255,255,255,0.8); padding:20px;  margin-bottom: 40px; ">
+     <p>CPU Drains the battery. Avoid using it!</p>
+     <ul>
+      <li>Avoid Reflows (and repaints)</li>
+      <li>Minimize JavaScript (size and activity)</li>
+        <li>Avoid loading resources you don't need</li>
+      <li>No JavaScript Animations<ul>
+      <li><code class="yes">requestAnimationFrame</code> (not <code>setInterval</code> or <code>setTimeout</code>)</li>
+      <li class="yes">CSS Animation</li></ul></li>
+
+        <li>Manage memory</li><li>Avoid waking up the radio - <b class="yes">prefetch</b></li>
+     </ul>
+     </div>
+     <footer class="credit">Image Credit: <a href="http://naiksaneet.wordpress.com">naiksaneet.wordpress.com</a></footer>
+     </section>
+    </div>
+
 
 <div class="slide tweet">
   <blockquote class="twitter-tweet" lang="en"><p>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</p>&mdash; Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/statuses/463069042182332416">May 4, 2014</a></blockquote>
@@ -644,6 +711,40 @@ A complex page means more bytes to download, and it also means slower DOM access
     <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
 
     </section>
+</div>
+
+
+<div class="slide">
+    <header>
+      <h1>Minimize the DOM</h1>
+    </header>
+    <section>
+        <ul class="">
+            <li>Minimize number of nodes
+              <ul class="">
+                  <li>Uses up memory &amp; time</li>
+                    <li>Measures each node for each repaint</li>
+                </ul></li>
+            <li>Cache DOM lookups
+            <ul class="">
+                  <li>Store them!</li>
+                </ul>
+            </li>
+            <li>Minimize DOM manipulations
+              <ul class="">
+                  <li>Batch DOM queries &amp; DOM manipulations separately </li>
+                </ul>
+            </li>
+        </ul>
+         <p class="notes" style="margin-top:50px">More nodes = more expensive! </p>
+
+    </section>
+  </div>
+
+
+<div class="slide tweet">
+<blockquote class="twitter-tweet" lang="en"><p>Load times on mobile have improved drastically by moving from client-side to server-side JavaScript logic for injecting content. <a href="https://twitter.com/search?q=%23nodejs&amp;src=hash">#nodejs</a> ❤</p>&mdash; Web Platform Daily (@openwebdaily) <a href="https://twitter.com/openwebdaily/statuses/458146923221102594">April 21, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 

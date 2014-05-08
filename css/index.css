@@ -288,6 +288,11 @@ li:hover .hidenotes {
   -webkit-animation: resize infinite 8s 2s linear alternate paused backwards;
   animation: resize infinite 8s 2s linear alternate paused backwards; }
 
+.object.resize2 object {
+  -webkit-animation: resized infinite 8s 2s linear alternate paused backwards;
+  animation: resized infinited 8s 2s linear alternate paused backwards;
+  border: 1px solid; }
+
 .object.resize:hover object {
   -webkit-animation-play-state: paused; }
 
@@ -343,6 +348,15 @@ li:hover .hidenotes {
   60%, 100% {
     max-width: 320px;
     min-height: 480px; } }
+
+@-webkit-keyframes resized {
+  0%, 30% {
+    height: 100%;
+    width: 20%; }
+
+  70%, 100% {
+    width: 140%;
+    height: 200%; } }
 
 .objectlink {
   position: absolute;
