@@ -69,6 +69,9 @@ body {
   box-sizing: border-box; }
   .slide:nth-of-type(odd) {
     border-radius: 0 50px; }
+    .slide:nth-of-type(odd) .objectlink {
+      border-radius: 0 45px 0 40px;
+      right: 6px; }
 
 .past, .current, .future, .far-past, .far-future {
   display: block; }
@@ -131,8 +134,10 @@ body {
   box-sizing: border-box;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, cursive,serif; }
 
-.content td {
-  border: 1px solid black; }
+td,
+th {
+  border: 1px solid #ccc;
+  text-align: center; }
 
 .invalid {
   background-color: red; }
@@ -236,6 +241,22 @@ pre {
 .floatright img {
   margin: 2px; }
 
+.hilite {
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); }
+
+cite {
+  text-align: right;
+  display: block;
+  margin-top: 1rem; }
+
+cite:before {
+  content: '-'; }
+
+a {
+  color: steelblue; }
+
 .object object, .object .img {
   height: 100%;
   width: 100%; }
@@ -244,16 +265,22 @@ pre {
   width: 200%;
   -webkit-transform: scale(0.5);
   -webkit-transform-origin: top left;
+  transform: scale(0.5);
+  transform-origin: top left;
   height: 200%;
-  -webkit-animation: resize infinite 10s 5s linear alternate paused backwards; }
+  -webkit-animation: resize infinite 8s 2s linear alternate paused backwards;
+  animation: resize infinite 8s 2s linear alternate paused backwards; }
 
 .object.resize:hover object {
   -webkit-animation-play-state: paused; }
 
 .object.resize .img {
-  -webkit-animation: resize_clip infinite 10s 5s linear alternate paused backwards;
+  -webkit-animation: resize_clip infinite 8s 2s linear alternate paused backwards;
+  animation: resize_clip infinite 8s 2s linear alternate paused backwards;
   margin: auto;
   border: 1px solid #ccc;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); }
 
 .current.object.resize .img,
@@ -261,14 +288,25 @@ pre {
   -webkit-animation-play-state: running; }
 
 @-webkit-keyframes resize {
-  0%, 40% {
+  0%, 30% {
     height: 100%;
-    width: 100%;
+    width: 50%;
     -webkit-transform: scale(1); }
 
-  60%, 100% {
+  70%, 100% {
     width: 200%;
     -webkit-transform: scale(0.5);
+    height: 200%; } }
+
+@keyframes resize {
+  0%, 30% {
+    height: 100%;
+    width: 50%;
+    transform: scale(1); }
+
+  70%, 100% {
+    width: 200%;
+    transform: scale(0.5);
     height: 200%; } }
 
 @-webkit-keyframes resize_clip {
@@ -280,17 +318,45 @@ pre {
     max-width: 320px;
     min-height: 480px; } }
 
-.twitter-tweet,
+@keyframes resize_clip {
+  0%, 60% {
+    max-width: 100%;
+    min-height: 900px; }
+
+  60%, 100% {
+    max-width: 320px;
+    min-height: 480px; } }
+
+.objectlink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: steelblue;
+  color: #FFF;
+  padding: 5px 20px;
+  border-radius: 0 0 0 40px;
+  text-decoration: none;
+  font-size: 0.8rem; }
+
 .tweet iframe {
   margin: 100px auto 0 !important;
   font-size: 1.2rem;
-  -webkit-transform: scale(1.65);
-  -webkit-transform-origin: top; }
+  -webkit-transform: scale(1.65); }
 
 div .slash {
   font-size: 4rem;
   -webkit-transform: rotate(-10deg);
   margin-top: 150px; }
+
+.wholepoint {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1rem;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -3px -3px 3px rgba(0, 0, 0, 0.3);
+  background-color: white; }
 
 @media print {
   .slide {
