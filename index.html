@@ -70,6 +70,7 @@ Based on: http://estelle.github.com/rwdpanacea
   <header><h1></h1></header>
     <section class="content">
 <img src="img/aspectratio.svg">
+<small style="opacity: 0.25;">breakpoints</small>
     </section>
 </div>
 
@@ -99,8 +100,9 @@ Based on: http://estelle.github.com/rwdpanacea
      <pre>@viewport { viewport-properties }</pre>
 
      <p>Specifies viewport size, zoom factor, and orientation.</p>
-
-     <small>Resource: <a href="http://www.quirksmode.org/mobile/viewports2.html">A tale of 2 viewports</a></small>
+<p>
+     <small>Resource: <a href="http://www.quirksmode.org/mobile/viewports2.html" target="_blank">A tale of 2 viewports</a><br/>
+      Tutorial: <a href="http://estelle.github.io/CSS-Workshop/part_04_media.html" target="_blank">Media Queries slide deck</a></small></p>
     </section>
 </div>
 
@@ -285,7 +287,7 @@ overflow:hidden; ">
         <thead>
           <tr>
             <th></th>
-            <th>Wide / Desktop</th>
+            <th>Wide / WiFi</th>
             <th>Narrow / WiFi</th>
           </tr>
         </thead>
@@ -442,7 +444,7 @@ A complex page means more bytes to download, and it also means slower DOM access
 </li>
 
 </ul>
-     <footer>Click item for more info. Link: <a href="http://developer.yahoo.com/yslow/">YSlow</a></footer>
+     <a href="http://developer.yahoo.com/yslow/" class="objectlink">YSlow</a>
      </section>
     </div>
 
@@ -503,7 +505,7 @@ A complex page means more bytes to download, and it also means slower DOM access
 <div class="slide object resize resize2">
   <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
   <section>
-  <object data="cc.svg">
+  <object data="cc.svg" style="outline: 1px solid;">
 <!--[if lte IE 8]>
 <img src="images/medium.png" alt="Fall back for IE">
 <![endif]-->
@@ -605,7 +607,7 @@ A complex page means more bytes to download, and it also means slower DOM access
       <header><h1>... but also consider ...</h1></header>
         <section class="content">
           <ol>
-            <li>latency</li>
+            <li>latency (already covered)</li>
             <li>memory</li>
             <li>battery</li>
             <li>responsiveness</li>
@@ -631,7 +633,15 @@ A complex page means more bytes to download, and it also means slower DOM access
  </div>
 
 
-<div class="slide normal">
+
+
+<div class="slide tweet">
+  <blockquote class="twitter-tweet" lang="en"><p>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</p>&mdash; Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/statuses/463069042182332416">May 4, 2014</a></blockquote>
+</div>
+
+
+
+<div class="slide">
      <section class="content">
 
 
@@ -650,6 +660,8 @@ A complex page means more bytes to download, and it also means slower DOM access
     </section>
 </div>
 
+
+
 <div class="slide">
   <header><h1>JavaScript!</h1></header>
     <section class="content">
@@ -658,10 +670,10 @@ A complex page means more bytes to download, and it also means slower DOM access
 <li>Reduce JS to only what is needed</li>
 <li>Are libraries really necessary?
 <ul>
-  <li>Include only functions used by page to reduces
+  <li>Include only functions used by page to reduce
 
 energy use.</li>
-  <li>Goal of most: equalize across browsers <br> (not necessry in mobile space)</li>
+  <li>Goal of most libraries is equalize across browsers <br> (not necessry in mobile space)</li>
 <li>Libraries simplify web
 
 development, but increase energy use.</li>
@@ -694,10 +706,6 @@ development, but increase energy use.</li>
     </div>
 
 
-<div class="slide tweet">
-  <blockquote class="twitter-tweet" lang="en"><p>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</p>&mdash; Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/statuses/463069042182332416">May 4, 2014</a></blockquote>
-</div>
-
 
 <div class="slide resizeimg">
   <header><h1>CSS Animation, not JavaScript</h1></header>
@@ -712,6 +720,56 @@ development, but increase energy use.</li>
 
     </section>
 </div>
+
+
+
+<!-- HTC Inspire: How much CPU is used without anything running-->
+<div class="slide normal">
+     <header><h1>Browser shares Memory</h1></header>
+     <section>
+    <table class="htc">
+    <thead><tr><td colspan="3">Running Services</td></tr></thead>
+    <tfoot><tr><td style="background-color:#FCC">Other</td><td colspan="2" style="background-color:#6C9">73MB Avail: 255MB + 182MB in 21</td></tr></tfoot>
+    <tbody>
+      <tr><td colspan="2">Calendar</td><td>8.4MB</td></tr>
+        <tr><td colspan="3">Process:com.htc.bgp</td></tr>
+
+      <tr><td rowspan="2"></td><td>ObexService</td><td>31:52:14</td></tr>
+        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
+
+      <tr><td colspan="2">AT&amp;T Navigator</td><td>8.4MB</td></tr>
+        <tr><td colspan="3">Process: com.telnav.app.android.congular</td></tr>
+
+      <tr><td rowspan="2"></td><td>ResoucePreLoader</td><td>Restarting</td></tr>
+        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
+
+
+      <tr><td colspan="2">AT&amp;T Spots</td><td>2.4MB</td></tr>
+        <tr><td colspan="3">Process: com.matchboxmobile.wasp</td></tr>
+
+      <tr><td rowspan="2"></td><td>WispService</td><td>31:52:14</td></tr>
+        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
+
+
+
+      <tr><td colspan="2">Media</td><td>4.1MB</td></tr>
+        <tr><td colspan="3">Process: android.process.media</td></tr>
+
+      <tr><td rowspan="2"></td><td>DownloadService</td><td>31:52:14</td></tr>
+        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
+
+
+
+      <tr><td colspan="2">PVWmdrmService</td><td>2.2MB</td></tr>
+        <tr><td colspan="3">Process: com.pv.wmdrmservice</td></tr>
+
+      <tr><td rowspan="2"></td><td>PVWmdrmService</td><td>31:52:14</td></tr>
+        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
+    </tbody>
+    </table>
+     </section>
+    </div>
+
 
 
 <div class="slide">
@@ -747,6 +805,44 @@ development, but increase energy use.</li>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
+
+
+<div class="slide title">
+  <header><h1>Responsiveness</h1></header>
+  <ol class="big" style="margin-left: 100px; text-align: left"><li>User Interaction
+  <ul><li>Aim for a 100ms response time!</li></ul></li>
+  <li>Re-rendering time<ul><li>60FPS = 16.67ms per frame</li></ul></li></ol>
+</div>
+
+
+
+<!-- touch events -->
+<div class="slide" style="background-image:url(images/gestures.gif); background-size:80%; background-position: 50% 90%">
+<header>
+<h1>Touch Events</h1>
+</header>
+<section>
+<ul style="background-color: rgba(255,255,255, 0.9); float: left;">
+    <li>Touch Event: 300ms delay</li>
+    <li>provide user feedback, fetch, update when ready</li>
+</ul>
+<pre contenteditable style="font-size: 1.4rem;background-color: rgba(255,255,255, 0.9); clear: both; float: left;">el.addEventListener('click', myFunction);
+el.addEventListener('touchend', myFunction);<b style="color:#900">*</b></pre>
+<pre contenteditable style="font-size: 1.4rem;background-color: rgba(255,255,255, 0.9); clear: both; float: left;">&lt;meta name="viewport"
+ content="width=device-width;
+          initial-scale=1; maximum-scale=1;"></pre>
+
+</section>
+<b style="color:#900">* Scroll throws a touchend :(</b>
+<a class="objectlink" href="http://www.lukew.com/touch/TouchGestureGuide.pdf">Luke W.</a>
+</div>
+
+
+<div class="slide">
+  <header><h1 class="slash">Performance Budget!</h1></header>
+    <section class="content">
+    </section>
+</div>
 
 <div class="slide">
   <header><h1></h1></header>
