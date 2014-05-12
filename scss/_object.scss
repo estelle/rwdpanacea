@@ -1,0 +1,116 @@
+.object object, .object .img {
+  height: 100%;
+  width: 100%;
+}
+.object.resize object {
+  width: 200%;
+  -webkit-transform: scale(0.5);
+  -webkit-transform-origin: top left;
+  transform: scale(0.5);
+  transform-origin: top left;
+  height: 200%;
+  -webkit-animation: resize infinite 8s 2s linear alternate paused backwards;
+  animation: resize infinite 8s 2s linear alternate paused backwards;
+
+}
+
+.object.resize2 object {
+  -webkit-animation: resized infinite 8s 2s linear alternate paused backwards;
+  animation: resized infinited 8s 2s linear alternate paused backwards;
+  border: 1px solid;
+
+}
+
+.object.resize:hover object {
+  -webkit-animation-play-state: paused;
+}
+
+.object.resize .img {
+  -webkit-animation: resize_clip infinite 8s 2s linear alternate paused backwards;
+  animation: resize_clip infinite 8s 2s linear alternate paused backwards;
+  margin: auto;
+  border: 1px solid #ccc;
+
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+.current.object.resize .img,
+.current.object.resize object
+ {
+  -webkit-animation-play-state: running;
+}
+@-webkit-keyframes resize {
+  0%, 30% {
+    height:100%;
+    width: 50%;
+   -webkit-transform: scale(1);
+  }
+  70%, 100% {
+    width: 200%;
+    -webkit-transform: scale(0.5);
+    height: 200%;
+  }
+}
+
+@keyframes resize {
+  0%, 30% {
+    height:100%;
+    width: 50%;
+   transform: scale(1);
+  }
+  70%, 100% {
+    width: 200%;
+    transform: scale(0.5);
+    height: 200%;
+  }
+}
+
+@-webkit-keyframes resize_clip {
+  0%, 60% {
+    max-width: 100%;
+    min-height:900px;
+  }
+  60%, 100% {
+    max-width: 320px;
+    min-height:480px;
+  }
+}
+
+@keyframes resize_clip {
+  0%, 60% {
+    max-width: 100%;
+    min-height:900px;
+  }
+  60%, 100% {
+    max-width: 320px;
+    min-height:480px;
+  }
+}
+
+@-webkit-keyframes resized {
+  0%, 30% {
+    height:100%;
+    width: 20%;
+  }
+  70%, 100% {
+    width: 140%;
+    height: 200%;
+  }
+}
+
+
+
+
+.objectlink {
+position: absolute;
+top: 0;
+right: 0;
+background-color: steelblue;
+color: #FFF;
+padding: 5px 20px;
+border-radius: 0 0 0 40px;
+text-decoration: none;
+font-size: 0.8rem;
+}
