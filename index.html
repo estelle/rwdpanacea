@@ -13,7 +13,7 @@ Based on: http://estelle.github.com/rwdpanacea
 <meta name="twitter:widgets:link-color" content="#4682B4">
 <meta name="twitter:widgets:theme" content="light">
 <style>
-
+.tweet a {opacity: 0;}
 </style>
 
 </head>
@@ -25,7 +25,7 @@ Based on: http://estelle.github.com/rwdpanacea
 
 <div class="slide intro">
     <section class="content">
-    <h1 class="slash">RWD is Not a Panacea</h1>
+    <h1 class="slash" id="indianajones"><span><b>R</b>WD</span> is not a<br/> <span><b>P</b>anacea</span></h1>
       <h2>Estelle Weyl</h2>
       <p><a href="http://estelle.github.io/rwdpanacea">http://estelle.github.io/rwdpanacea</a></p>
     </section>
@@ -135,9 +135,9 @@ Based on: http://estelle.github.com/rwdpanacea
         <li>flexible images, and </li>
         <li>media queries</li>
       </ol>
-      <blockquote>
+     <!-- <blockquote>
 Responsive design is an approach to web page creation that makes use of flexible layouts, flexible images and cascading style sheet media queries. The goal of responsive design is to build web pages that detect the visitor's screen size and orientation and change the layout accordingly.
-<cite><a href="https://www.google.com/search?q=responsive+web+design&oq=responsive+web+design&aqs=chrome..69i57j0l2j69i59j69i60l2.6990j0j7&sourceid=chrome&es_sm=119&ie=UTF-8#q=what%20is%20responsive%20design">Google</a></cite></blockquote>
+<cite><a href="https://www.google.com/search?q=responsive+web+design&oq=responsive+web+design&aqs=chrome..69i57j0l2j69i59j69i60l2.6990j0j7&sourceid=chrome&es_sm=119&ie=UTF-8#q=what%20is%20responsive%20design">Google</a></cite></blockquote>-->
     </section>
 </div>
 
@@ -250,9 +250,22 @@ overflow:hidden; ">
 
 
 <div class="slide">
-  <header><h1 class="slash">Squishy!!!</h1></header>
-    <section class="content"><a href="http://twitter.com/snugug">@snugug</a>
+
+    <header><h1>Responsive Web Design</h1></header>
+    <section class="content"  style="font-size: 1.5rem">To see RWD in action, open a responsive site in a desktop browser and slowly make the browser thinner and wider. The layout magically adjusts itself to more comfortably fit the new width of the browser, even if you make the page as skinny as the resolution of a mobile phone.
+      <cite><a href="http://google.com">Google</a></cite>
     </section>
+    <div style="position: absolute; width: 100%; height: 100%; top: 20px; left: 20px; background-color: rgba(255,255,255,0.5)">
+    <header><h1 class="slash" id="indianajones"><span><b>S</b>quishy!!!</span></h1></header>
+    <section class="content" style="transform: translatey(150px);"><a href="http://twitter.com/snugug">@snugug</a>
+    </section>
+  </div>
+</div>
+
+
+ <div class="slide tweet">
+<blockquote class="twitter-tweet" lang="en"><p>Hi i’ve been on one to two bars of 3G service for the past week and let me tell you, your website sucks. Yes yours.</p>&mdash; Winston Hearn (@suchwinston) <a href="https://twitter.com/suchwinston/statuses/456526761044357121">April 16, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 
@@ -265,10 +278,6 @@ overflow:hidden; ">
     </section>
 </div>
 
- <div class="slide tweet">
-<blockquote class="twitter-tweet" lang="en"><p>Hi i’ve been on one to two bars of 3G service for the past week and let me tell you, your website sucks. Yes yours.</p>&mdash; Winston Hearn (@suchwinston) <a href="https://twitter.com/suchwinston/statuses/456526761044357121">April 16, 2014</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
 
 
 
@@ -344,9 +353,15 @@ overflow:hidden; ">
     Youtube Feathers:<br/>Regular:  &nbsp;58 requests/1200 kB<br/>Feathers: 14 requests/100 kB</p>
 </div>
 
-<div class="slide tweet">
+<!--<div class="slide tweet">
   <blockquote class="twitter-tweet" lang="en"><p>Just because no one uses your mobile site, doesn&#39;t mean you don&#39;t need to improve it. Maybe no one uses it because the experience sucks.</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/statuses/464131932133945344">May 7, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>-->
+
+<div class="slide" style="background: url(images/weightperf.jpg no-repeat center contain">
+  <header><h1></h1></header>
+    <section class="content">
+    </section>
 </div>
 
 <div class="slide">
@@ -557,6 +572,18 @@ A complex page means more bytes to download, and it also means slower DOM access
      </section>
  </div>
 
+ <div class="slide">
+  <header><h1>background-size</h1></header>
+    <section class="content">
+      <table>
+        <tr><th>auto</th><th>contain</th></tr>
+        <tr><td><img src="images/moon.jpg" style="width: 300px"></td><td><img  src="images/moon.jpg" style="width: 300px"></td></tr>
+        <tr><td>24ms</td><td>36ms</td></tr>
+
+        </table>
+    </section>
+</div>
+
 <div class="slide object resize resize2">
   <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
   <section>
@@ -572,6 +599,24 @@ A complex page means more bytes to download, and it also means slower DOM access
     <section class="content">
     </section>
 </div>
+
+<div class="slide">
+  <header><h1>But, it was so fast for me ...</h1></header>
+    <section class="content">
+      <table style="border: none">
+        <tr>
+          <td rowspan=2><img src="images/computer.png" alt="computer" style="width: 250px"></td>
+          <td class="telecom"><div></div></td>
+          <td><img src="images/telecom.png" alt="telecom italia"></td>
+        </tr>
+        <tr>
+          <td class="telecom"><div></div></td>
+          <td><img src="images/bt.jpg" alt="BT Italia"></td>
+        </tr>
+      </table>
+    </section>
+</div>
+
 
 <div class="slide">
     <header>
@@ -639,8 +684,6 @@ A complex page means more bytes to download, and it also means slower DOM access
   <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
      </section>
  </div>
-
-
 
 
 <div class="slide tweet">

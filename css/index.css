@@ -271,6 +271,9 @@ li:hover .hidenotes {
   padding: 5px;
   font-weight: normal; }
 
+ol {
+  font-size: 1.6rem; }
+
 .resizeimg img {
   width: 100%; }
 

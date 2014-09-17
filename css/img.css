@@ -17,6 +17,50 @@ body #presentation:before{
   width: 400px;
   background-position: right top;
 }
-
+#indianajones {
+  font-family: fedora;
+  font-size: 3rem;
+  line-height: 1;
+  -webkit-transform:  rotate(-19deg) skew(27deg);
+  transform: translatey(-50px) rotate(-19deg) skew(-27deg);
+  text-shadow: 1px 1px 2px red, 0 0 10px orange, 0 0 20px yellow ;
+}
+#indianajones b {
+  display: inline-block;
+  transform: scale(1.5);
+  transform-origin: right top;
+}
+#indianajones span {
+  font-size: 4rem;
+}
+#indianajones span:last-of-type{ padding-left: 1rem;}
 .slide {opacity: 0;}
 .current {opacity: 1;}
+
+@font-face {
+    font-family: 'fedora';
+    src: url('font/sf_fedora_shadow-webfont.eot');
+    src: url('font/sf_fedora_shadow-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/sf_fedora_shadow-webfont.woff2') format('woff2'),
+         url('font/sf_fedora_shadow-webfont.woff') format('woff'),
+         url('font/sf_fedora_shadow-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.telecom {
+  background-image: linear-gradient(to left, red, red);
+  width: 200px;
+  background-size: 100% 10px; background-position: center;
+  background-repeat: no-repeat;
+}
+.telecom div {
+  height: 0;
+  width: 0;
+  border: 20px solid transparent;
+  border-left-color: red;
+  float: right;
+  margin-right: -30px;
+}
+a { color: #996300;}
+.slide img {box-shadow: none;}
+.content ol li { font-size: 1rem;}
