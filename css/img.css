@@ -63,4 +63,12 @@ body #presentation:before{
 }
 a { color: #996300;}
 .slide img {box-shadow: none;}
-.content ol li { font-size: 1rem;}
+.large li {font-size: 1.7rem;}
+ol li, .small li { font-size: 1rem;}
+
+p.resources {
+  text-align: right;
+  opacity: 0.7;
+  font-family: serif;
+  font-size: 1rem;
+}

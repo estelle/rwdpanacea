@@ -101,9 +101,9 @@ Based on: http://estelle.github.com/rwdpanacea
      <pre>@viewport { viewport-properties }</pre>
 
      <p>Specifies viewport size, zoom factor, and orientation.</p>
-<p>
-     <small>Resource: <a href="http://www.quirksmode.org/mobile/viewports2.html" target="_blank">A tale of 2 viewports</a><br/>
-      Tutorial: <a href="http://estelle.github.io/CSS-Workshop/part_04_media.html" target="_blank">Media Queries slide deck</a></small></p>
+<p class="resources">
+     Resource: <a href="http://www.quirksmode.org/mobile/viewports2.html" target="_blank">A tale of 2 viewports</a><br/>
+      Tutorial: <a href="http://estelle.github.io/CSS-Workshop/part_04_media.html" target="_blank">Media Queries slide deck</a></p>
     </section>
 </div>
 
@@ -130,7 +130,7 @@ Based on: http://estelle.github.com/rwdpanacea
 <div class="slide">
   <header><h1>Responsive Design</h1></header>
     <section class="content">
-      <ol>
+      <ol class=large>
         <li>fluid grids</li>
         <li>flexible images, and </li>
         <li>media queries</li>
@@ -269,16 +269,18 @@ overflow:hidden; ">
 </div>
 
 
-<div class="slide">
-  <header><h1>Size matters</h1></header>
-    <section class="content"><blockquote><p>According to the HTTP Archive, the average top 1,000 web page is 1246 KB, compared to 828 KB in May 2012. This represents a 50% rate of growth in just one year.</p>
-    <p>The average web page has almost doubled in size since 2010.</p>
-      <cite><a href="https://twitter.com/tameverts">Tammy Everts (2013)</a></blockquote>
 
+
+<div class="slide">
+  <header><h1>RWD != "design"</h1></header>
+    <section class="content">
+      <ul class="large">
+        <li>Latency and Bandwidth</li>
+        <li>Memory</li>
+        <li>Battery</li>
+        <li>Responsiveness</li>
     </section>
 </div>
-
-
 
 
 
@@ -344,6 +346,16 @@ overflow:hidden; ">
     UA sniffing for different experiences:<br/>Desktop: 86 requests/1.9 MB<br/>Mobile: &nbsp; 89 requests/2.0 MB</p>
 </div>
 
+<div class="slide">
+  <header><h1>Size matters</h1></header>
+    <section class="content">
+      <h1 style="text-align: center; font-size: 5rem; text-shadow: 5px 5px 0 orange">227%</h1>
+      <p>According to the HTTP Archive, the average top 1,000 web page is <a href="http://httparchive.org/interesting.php">1,860 KB</a>, compared to <a href="http://httparchive.org/interesting.php?a=All&l=Sep%201%202011">816 KB in 2011</a>.</p>
+
+<p class="resources"><a href="http://httparchive.org/interesting.php">HTTPArchive</a><br/>Images: 1180 KB v. 490 KB<br/>JS: 292 KB v. 144 KB</p>
+    </section>
+</div>
+
 
 
 <div class="slide object">
@@ -358,8 +370,15 @@ overflow:hidden; ">
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>-->
 
-<div class="slide" style="background: url(images/weightperf.jpg no-repeat center contain">
-  <header><h1></h1></header>
+<div class="slide">
+  <header><h1>TL;DR;</h1></header>
+    <section class="content"><p>By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
+    </section>
+</div>
+
+
+<div class="slide" style="background-image: url(images/weightperf.jpg); background-repeat: no-repeat; background-position: center; background-size: contain">
+  <header><h1>Duh!</h1></header>
     <section class="content">
     </section>
 </div>
@@ -375,20 +394,20 @@ overflow:hidden; ">
 <div class="slide">
   <header><h1>Point being.....</h1></header>
     <section class="content">
-      <ol>
+      <ol class="large">
         <li>size of requests</li>
         <li>number of requests</li>
         <li>number of DNS lookups</li>
       </ol>
     </section>
 </div>
-
+<!--
 <div class="slide object">
   <object data="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0"></object>
   <a href="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0" target="play" class="objectlink">WebPageTest.org</a>
 </div>
 
-
+-->
 
 
 <!--YSLOW -->
@@ -529,7 +548,12 @@ A complex page means more bytes to download, and it also means slower DOM access
 <img src="images/medium.png" alt="Fall back for IE">
 <![endif]-->
 </object>
-<pre>
+
+  </section>
+ </div>
+
+<div class="slide">
+    <section class="content"><pre  style="margin-top: 0px; font-size: 1rem;">
 &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 329&quot;
   preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;
  &lt;title&gt;Clown Car&lt;/title&gt;
@@ -551,8 +575,11 @@ A complex page means more bytes to download, and it also means slower DOM access
  }
  &lt;/style&gt;
 &lt;/svg&gt;</pre>
-  </section>
- </div>
+<p class="resources">Resource: <a href="http://www.smashingmagazine.com/2013/06/02/clown-car-technique-solving-for-adaptive-images-in-responsive-web-design/">Clown Car Technique</a>
+    </section>
+</div>
+
+
 
  <div class="slide resize resizeimg">
    <header><h1>Right-size your images</h1></header>
@@ -660,7 +687,7 @@ A complex page means more bytes to download, and it also means slower DOM access
       <header><h1>... but also consider ...</h1></header>
         <section class="content">
           <ol>
-            <li>latency (already covered)</li>
+            <li>bandwidth and latency</li>
             <li>memory</li>
             <li>battery</li>
             <li>responsiveness</li>
@@ -829,19 +856,19 @@ development, but increase energy use.</li>
       <h1>Minimize the DOM</h1>
     </header>
     <section>
-        <ul class="">
+        <ul class="large">
             <li>Minimize number of nodes
-              <ul class="">
+              <ul class="small">
                   <li>Uses up memory &amp; time</li>
                     <li>Measures each node for each repaint</li>
                 </ul></li>
             <li>Cache DOM lookups
-            <ul class="">
+            <ul class="small">
                   <li>Store them!</li>
                 </ul>
             </li>
             <li>Minimize DOM manipulations
-              <ul class="">
+              <ul class="small">
                   <li>Batch DOM queries &amp; DOM manipulations separately </li>
                 </ul>
             </li>
@@ -861,8 +888,8 @@ development, but increase energy use.</li>
 
 <div class="slide title">
   <header><h1>Responsiveness</h1></header>
-  <ol class="big" style="margin-left: 100px; text-align: left"><li>User Interaction
-  <ul><li>Aim for a 100ms response time!</li></ul></li>
+  <ol class="large" style="margin-left: 100px; text-align: left"><li>User Interaction
+  <ul class="large"><li>Aim for a 100ms response time!</li></ul></li>
   <li>Re-rendering time<ul><li>60FPS = 16.67ms per frame</li></ul></li></ol>
 </div>
 
