@@ -9,11 +9,10 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 Based on: http://estelle.github.com/rwdpanacea
 -->
 <link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/dom2.css">
 <meta name="twitter:widgets:link-color" content="#4682B4">
 <meta name="twitter:widgets:theme" content="light">
 <style>
-.tweet a {opacity: 0;}
+
 </style>
 
 </head>
@@ -25,8 +24,8 @@ Based on: http://estelle.github.com/rwdpanacea
 
 <div class="slide intro">
     <section class="content">
-    <h1 style="font-size: 3rem; margin-top: 10%;">RWD is not a Panacea</h1>
-      <h2 style="margin-top: 25%;">Estelle Weyl</h2>
+    <h1 class="slash">RWD is Not a Panacea</h1>
+      <h2>Estelle Weyl</h2>
       <p><a href="http://estelle.github.io/rwdpanacea">http://estelle.github.io/rwdpanacea</a></p>
     </section>
 </div>
@@ -46,7 +45,7 @@ Based on: http://estelle.github.com/rwdpanacea
 </div>
 
 <div class="slide tweet">
-  <blockquote class="twitter-tweet" lang="en"><p>Just because no one uses your mobile site, doesn&#39;t mean you don&#39;t need to improve it. Maybe no one uses it because the experience is so bad.</p>&mdash; Me (@estellevw) <a href="https://twitter.com/estellevw/status/530519898112667648">November 7, 2014</a></blockquote>
+  <blockquote class="twitter-tweet" lang="en"><p>Just because no one uses your mobile site, doesn&#39;t mean you don&#39;t need to improve it. Maybe no one uses it because the experience sucks.</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/statuses/464131932133945344">May 7, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
@@ -63,7 +62,6 @@ Based on: http://estelle.github.com/rwdpanacea
   <header><h1></h1></header>
     <section class="content">
 <img src="img/android.svg">
-<a href="http://opensignal.com/reports/fragmentation.php">OpenSignal.com</a>
     </section>
 </div>
 
@@ -72,7 +70,6 @@ Based on: http://estelle.github.com/rwdpanacea
   <header><h1></h1></header>
     <section class="content">
 <img src="img/aspectratio.svg">
-<a href="http://opensignal.com/reports/fragmentation.php">OpenSignal.com</a>
 <small style="opacity: 0.25;">breakpoints</small>
     </section>
 </div>
@@ -103,9 +100,9 @@ Based on: http://estelle.github.com/rwdpanacea
      <pre>@viewport { viewport-properties }</pre>
 
      <p>Specifies viewport size, zoom factor, and orientation.</p>
-<p class="resources">
-     Resource: <a href="http://www.quirksmode.org/mobile/viewports2.html" target="_blank">A tale of 2 viewports</a><br/>
-      Tutorial: <a href="http://estelle.github.io/CSS-Workshop/part_04_media.html" target="_blank">Media Queries slide deck</a></p>
+<p>
+     <small>Resource: <a href="http://www.quirksmode.org/mobile/viewports2.html" target="_blank">A tale of 2 viewports</a><br/>
+      Tutorial: <a href="http://estelle.github.io/CSS-Workshop/part_04_media.html" target="_blank">Media Queries slide deck</a></small></p>
     </section>
 </div>
 
@@ -132,14 +129,14 @@ Based on: http://estelle.github.com/rwdpanacea
 <div class="slide">
   <header><h1>Responsive Design</h1></header>
     <section class="content">
-      <ol class=large>
+      <ol>
         <li>fluid grids</li>
         <li>flexible images, and </li>
         <li>media queries</li>
       </ol>
-     <!-- <blockquote>
+      <blockquote>
 Responsive design is an approach to web page creation that makes use of flexible layouts, flexible images and cascading style sheet media queries. The goal of responsive design is to build web pages that detect the visitor's screen size and orientation and change the layout accordingly.
-<cite><a href="https://www.google.com/search?q=responsive+web+design&oq=responsive+web+design&aqs=chrome..69i57j0l2j69i59j69i60l2.6990j0j7&sourceid=chrome&es_sm=119&ie=UTF-8#q=what%20is%20responsive%20design">Google</a></cite></blockquote>-->
+<cite><a href="https://www.google.com/search?q=responsive+web+design&oq=responsive+web+design&aqs=chrome..69i57j0l2j69i59j69i60l2.6990j0j7&sourceid=chrome&es_sm=119&ie=UTF-8#q=what%20is%20responsive%20design">Google</a></cite></blockquote>
     </section>
 </div>
 
@@ -241,6 +238,21 @@ overflow:hidden; ">
     </section>
 </div>
 
+<div class="slide">
+  <header><h1>Size matters</h1></header>
+    <section class="content"><blockquote><p>According to the HTTP Archive, the average top 1,000 web page is 1246 KB, compared to 828 KB in May 2012. This represents a 50% rate of growth in just one year.</p>
+    <p>The average web page has almost doubled in size since 2010.</p>
+      <cite><a href="https://twitter.com/tameverts">Tammy Everts (2013)</a></blockquote>
+
+    </section>
+</div>
+
+ <div class="slide tweet">
+<blockquote class="twitter-tweet" lang="en"><p>Hi i’ve been on one to two bars of 3G service for the past week and let me tell you, your website sucks. Yes yours.</p>&mdash; Winston Hearn (@suchwinston) <a href="https://twitter.com/suchwinston/statuses/456526761044357121">April 16, 2014</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+
 
 
 <div class="slide">
@@ -252,32 +264,10 @@ overflow:hidden; ">
 
 
 <div class="slide">
-
-    <header><h1>Responsive Web Design</h1></header>
-    <section class="content"  style="font-size: 1.5rem">To see RWD in action, open a responsive site in a desktop browser and slowly make the browser thinner and wider. The layout magically adjusts itself to more comfortably fit the new width of the browser, even if you make the page as skinny as the resolution of a mobile phone.
-      <cite><a href="http://google.com">Google</a></cite>
+  <header><h1 class="slash">Squishy!!!</h1></header>
+    <section class="content"><a href="http://twitter.com/snugug">@snugug</a>
     </section>
-    <div style="position: absolute; width: 100%; height: 100%; top: 20px; left: 20px; background-color: rgba(255,255,255,0.5)">
-    <header><h1 class="slash" style="font-size: 7rem;">Squishy!!!</h1></header>
-    <section class="content" style="transform: translatey(150px);"><a href="http://twitter.com/snugug">@snugug</a>
-    </section>
-  </div>
 </div>
-
-
- <div class="slide tweet">
-<blockquote class="twitter-tweet" lang="en"><p>Hi i’ve been on one to two bars of 3G service for the past week and let me tell you, your website sucks. Yes yours.</p>&mdash; Winston Hearn (@suchwinston) <a href="https://twitter.com/suchwinston/statuses/456526761044357121">April 16, 2014</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-
-
-
-<div class="slide intro">
-  <header><h1>RWD !== Squishyness</h1></header>
-
-</div>
-
 
 
 
@@ -342,16 +332,6 @@ overflow:hidden; ">
     UA sniffing for different experiences:<br/>Desktop: 86 requests/1.9 MB<br/>Mobile: &nbsp; 89 requests/2.0 MB</p>
 </div>
 
-<div class="slide">
-  <header><h1>Size matters</h1></header>
-    <section class="content">
-      <h1 style="text-align: center; font-size: 5rem; text-shadow: 5px 5px 0 orange">274%</h1>
-      <p>According to the HTTP Archive, the average top 1,000 web page is <a href="http://httparchive.org/interesting.php">1,925 KB</a>, compared to <a href="http://httparchive.org/interesting.php?a=All&l=Sep%201%202011">702 KB in 2010</a>.</p>
-
-<p class="resources"><a href="http://httparchive.org/interesting.php">HTTPArchive</a><br/>Images: 1206 KB v. 416 KB<br/>JS: 305 KB v. 113 KB</p>
-    </section>
-</div>
-
 
 
 <div class="slide object">
@@ -361,22 +341,9 @@ overflow:hidden; ">
     Youtube Feathers:<br/>Regular:  &nbsp;58 requests/1200 kB<br/>Feathers: 14 requests/100 kB</p>
 </div>
 
-<!--<div class="slide tweet">
+<div class="slide tweet">
   <blockquote class="twitter-tweet" lang="en"><p>Just because no one uses your mobile site, doesn&#39;t mean you don&#39;t need to improve it. Maybe no one uses it because the experience sucks.</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/statuses/464131932133945344">May 7, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>-->
-
-<div class="slide">
-  <header><h1>TL;DR;</h1></header>
-    <section class="content"><p>By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
-    </section>
-</div>
-
-
-<div class="slide" style="background-image: url(images/weightperf.jpg); background-repeat: no-repeat; background-position: center; background-size: contain">
-  <header><h1>Duh!</h1></header>
-    <section class="content">
-    </section>
 </div>
 
 <div class="slide">
@@ -390,20 +357,20 @@ overflow:hidden; ">
 <div class="slide">
   <header><h1>Point being.....</h1></header>
     <section class="content">
-      <ol class="large">
+      <ol>
         <li>size of requests</li>
         <li>number of requests</li>
         <li>number of DNS lookups</li>
       </ol>
     </section>
 </div>
-<!--
+
 <div class="slide object">
   <object data="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0"></object>
   <a href="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0" target="play" class="objectlink">WebPageTest.org</a>
 </div>
 
--->
+
 
 
 <!--YSLOW -->
@@ -485,8 +452,8 @@ A complex page means more bytes to download, and it also means slower DOM access
 
 
 
-<div class="slide intro">
-  <header><h1 style="font-size: 3rem; margin: 100px auto 40px;">Responsive Images</h1></header>
+<div class="slide">
+  <header><h1 class="slash">Responsive &nbsp;&nbsp;Images</h1></header>
     <section class="content"><p>It's more than just making them squishy!</p>
     </section>
 </div>
@@ -544,12 +511,7 @@ A complex page means more bytes to download, and it also means slower DOM access
 <img src="images/medium.png" alt="Fall back for IE">
 <![endif]-->
 </object>
-
-  </section>
- </div>
-
-<div class="slide">
-    <section class="content"><pre  style="margin-top: 0px; font-size: 1rem;">
+<pre>
 &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 329&quot;
   preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;
  &lt;title&gt;Clown Car&lt;/title&gt;
@@ -571,11 +533,8 @@ A complex page means more bytes to download, and it also means slower DOM access
  }
  &lt;/style&gt;
 &lt;/svg&gt;</pre>
-<p class="resources">Resource: <a href="http://www.smashingmagazine.com/2013/06/02/clown-car-technique-solving-for-adaptive-images-in-responsive-web-design/">Clown Car Technique</a>
-    </section>
-</div>
-
-
+  </section>
+ </div>
 
  <div class="slide resize resizeimg">
    <header><h1>Right-size your images</h1></header>
@@ -592,20 +551,8 @@ A complex page means more bytes to download, and it also means slower DOM access
     <li>purple = rendering</li>
   </ul>
   <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
-    <footer><a href="https://twitter.com/tobint">Tobin Titus, Microsoft</a></footer> </section>
+     </section>
  </div>
-
- <div class="slide">
-  <header><h1>background-size</h1></header>
-    <section class="content">
-      <table>
-        <tr><th>auto</th><th>contain</th></tr>
-        <tr><td><img src="images/moon.jpg" style="width: 300px"></td><td><img  src="images/moon.jpg" style="width: 300px"></td></tr>
-        <tr><td>24ms</td><td>36ms</td></tr>
-
-        </table>
-    </section>
-</div>
 
 <div class="slide object resize resize2">
   <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
@@ -624,29 +571,6 @@ A complex page means more bytes to download, and it also means slower DOM access
 </div>
 
 <div class="slide">
-  <header><h1>But, it was so fast for me ...</h1></header>
-    <section class="content">
-      <table style="border: none">
-        <tr>
-          <td rowspan=2><img src="images/computer.png" alt="computer" style="width: 250px"></td>
-          <td class="telecom"><div></div></td>
-          <td><img src="images/telecom.png" alt="telecom italia"></td>
-        </tr>
-        <tr>
-          <td class="telecom"><div></div></td>
-          <td><img src="images/bt.jpg" alt="BT Italia"></td>
-        </tr>
-      </table>
-    </section>
-</div>
-
-
-
-<div class="slide tweet tweetparent">
-  <blockquote class="twitter-tweet" lang="en"><p>As ISPs promote ever faster download speeds, remember latency is the real performance killer <a href="https://twitter.com/search?q=%23perfmatters&amp;src=hash">#perfmatters</a> <a href="http://t.co/hfoYvHANQb">pic.twitter.com/hfoYvHANQb</a></p>&mdash; Andy Davies (@AndyDavies) <a href="https://twitter.com/AndyDavies/statuses/459716093993447424">April 25, 2014</a></blockquote>
-</div>
-
-<div class="slide">
     <header>
       <h1>Latency</h1>
     </header>
@@ -660,6 +584,10 @@ A complex page means more bytes to download, and it also means slower DOM access
     </section></div>
 
 
+
+<div class="slide tweet tweetparent">
+  <blockquote class="twitter-tweet" lang="en"><p>As ISPs promote ever faster download speeds, remember latency is the real performance killer <a href="https://twitter.com/search?q=%23perfmatters&amp;src=hash">#perfmatters</a> <a href="http://t.co/hfoYvHANQb">pic.twitter.com/hfoYvHANQb</a></p>&mdash; Andy Davies (@AndyDavies) <a href="https://twitter.com/AndyDavies/statuses/459716093993447424">April 25, 2014</a></blockquote>
+</div>
 
     <div class="slide">
       <header><h1>Yes, you want to...</h1></header>
@@ -684,7 +612,7 @@ A complex page means more bytes to download, and it also means slower DOM access
       <header><h1>... but also consider ...</h1></header>
         <section class="content">
           <ol>
-            <li>bandwidth and latency</li>
+            <li>latency (already covered)</li>
             <li>memory</li>
             <li>battery</li>
             <li>responsiveness</li>
@@ -706,9 +634,10 @@ A complex page means more bytes to download, and it also means slower DOM access
     <li>purple = rendering</li>
   </ul>
   <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
-    <footer><a href="https://twitter.com/tobint">Tobin Titus, Microsoft</a></footer>
      </section>
  </div>
+
+
 
 
 <div class="slide tweet">
@@ -854,19 +783,19 @@ development, but increase energy use.</li>
       <h1>Minimize the DOM</h1>
     </header>
     <section>
-        <ul class="large">
+        <ul class="">
             <li>Minimize number of nodes
-              <ul class="small">
+              <ul class="">
                   <li>Uses up memory &amp; time</li>
                     <li>Measures each node for each repaint</li>
                 </ul></li>
             <li>Cache DOM lookups
-            <ul class="small">
+            <ul class="">
                   <li>Store them!</li>
                 </ul>
             </li>
             <li>Minimize DOM manipulations
-              <ul class="small">
+              <ul class="">
                   <li>Batch DOM queries &amp; DOM manipulations separately </li>
                 </ul>
             </li>
@@ -886,8 +815,8 @@ development, but increase energy use.</li>
 
 <div class="slide title">
   <header><h1>Responsiveness</h1></header>
-  <ol class="large" style="margin-left: 100px; text-align: left"><li>User Interaction
-  <ul class="large"><li>Aim for a 100ms response time!</li></ul></li>
+  <ol class="big" style="margin-left: 100px; text-align: left"><li>User Interaction
+  <ul><li>Aim for a 100ms response time!</li></ul></li>
   <li>Re-rendering time<ul><li>60FPS = 16.67ms per frame</li></ul></li></ol>
 </div>
 
