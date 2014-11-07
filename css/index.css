@@ -383,7 +383,7 @@ ol {
   transform: scale(1.3); }
 
 div .slash {
-  font-size: 3rem;
+  font-size: 4rem;
   -webkit-transform: rotate(-10deg);
   margin-top: 150px;
   text-align: center; }
@@ -461,6 +461,20 @@ section td, section th {
 
 .htc tbody tr:nth-of-type(odd) td {
   padding-top: 4px; }
+
+table {
+  margin: auto;
+  border: 1px solid #DEDEDE;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.rowed tr:nth-of-type(even), .rowed th, .th th {
+  background-color: #DEDEDE; }
+
+section td, section th {
+  border: none;
+  font-size: 30px;
+  padding: 4px; }
 
 @media print {
   .slide {
