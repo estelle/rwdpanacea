@@ -599,9 +599,23 @@ A complex page means more bytes to download, and it also means slower DOM access
   <header><h1>background-size</h1></header>
     <section class="content">
       <table>
-        <tr><th>auto</th><th>contain</th></tr>
-        <tr><td><img src="images/moon.jpg" style="width: 300px"></td><td><img  src="images/moon.jpg" style="width: 300px"></td></tr>
-        <tr><td>24ms</td><td>36ms</td></tr>
+        <tr><th>auto</th><th>cover</th><th>contain</th></tr>
+        <tr>
+          <td><img src="images/barcelona.png" style="width: 250px"></td>
+          <td><img src="images/barcelona.png" style="width: 250px"></td>
+          <td><img src="images/barcelona.png" style="width: 250px"></td>
+        </tr>
+        <tr>
+          <td><img src="images/auto.gif" alt="auto"></td>
+          <td><img src="images/cover.gif" alt="cover"></td>
+          <td><img src="images/contain.gif" alt="contain"></td>
+        </tr>
+
+        <tr>
+          <td>44ms</td>
+          <td>182ms</td>
+          <td>203ms</td>
+        </tr>
 
         </table>
     </section>
