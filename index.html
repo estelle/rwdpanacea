@@ -9,7 +9,6 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 Based on: http://estelle.github.com/rwdpanacea
 -->
 <link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/dom2.css">
 <meta name="twitter:widgets:link-color" content="#4682B4">
 <meta name="twitter:widgets:theme" content="light">
 <style>
@@ -89,7 +88,7 @@ Based on: http://estelle.github.com/rwdpanacea
 
 <!-- Oracle - large -->
 <div class="slide object resize">
-  <div class="img" style="background: url(screenshots/snapdealdesktop.gif) no-repeat 0 0; background-size: contain;"></div>
+  <div class="img" style="background: url(screenshots/snapdealdesktop.gif) no-repeat 0 0; background-size: cover;"></div>
 </div>
 
 
@@ -522,52 +521,53 @@ A complex page means more bytes to download, and it also means slower DOM access
       </ol>
     </section>
 </div>
-<!--
-<div class="slide">
-  <header><h1></h1></header>
-    <section class="content">
-      <dl>
-        <dt>Wide: </dt>
-        <dd>73 requests, 3.4 MB Transferred, 13.26s</dd>
-        <dt>Narrow: </dt>
-        <dd>26 requests, 1.7 MB Transferred, 7.52s</dd>
-      </dl>
-    </section>
-</div> -->
 
 
 <div class="slide object resize resize2">
   <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
   <section>
-  <object data="cc.svg" style="outline: 1px solid;">
+  <object data="cc3.svg">
 <!--[if lte IE 8]>
 <img src="images/medium.png" alt="Fall back for IE">
 <![endif]-->
 </object>
+</div>
 
-  </section>
- </div>
+<div class="slide object resize resize2">
+  <header><h1>background-size: auto;</h1></header>
+  <section>
+  <object data="cc2.svg">
+<!--[if lte IE 8]>
+<img src="images/medium.png" alt="Fall back for IE">
+<![endif]-->
+</object>
+</div>
+
 
 <div class="slide">
-    <section class="content"><pre  style="margin-top: 0px; font-size: 1rem;">
+    <section class="content"><pre  style="margin-top: 0px; font-size: 1rem;" contenteditable>
 &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 329&quot;
   preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;
  &lt;title&gt;Clown Car&lt;/title&gt;
  &lt;style&gt;
   svg {
-    background-size: 100% 100%; background-repeat: no-repeat;
+    <strong>background-size: 100%;</strong> background-repeat: no-repeat;
   }
- @media screen and (max-width: 400px) {
-  svg {background-image: url(images/small.png&quot;);}
+ @media screen and (max-width: 300px) {
+  svg {background-image: url(images/small.png);
+  }
  }
- @media screen and (min-width: 401px) and (max-width: 700px) {
-  svg {background-image: url(images/medium.png);}
+ @media screen and (min-width: 301px) and (max-width: 600px) {
+  svg {background-image: url(images/medium.png);
+  }
  }
- @media screen and (min-width: 701px) and (max-width: 1000px) {
-  svg {background-image: url(images/big.png);}
+ @media screen and (min-width: 601px) and (max-width: 900px) {
+  svg {background-image: url(images/big.png);
+  }
  }
- @media screen and (min-width: 1001px) {
-  svg {background-image: url(images/huge.png);}
+ @media screen and (min-width: 901px) {
+  svg {background-image: url(images/huge.png);
+  }
  }
  &lt;/style&gt;
 &lt;/svg&gt;</pre>
@@ -607,15 +607,6 @@ A complex page means more bytes to download, and it also means slower DOM access
     </section>
 </div>
 
-<div class="slide object resize resize2">
-  <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
-  <section>
-  <object data="cc2.svg">
-<!--[if lte IE 8]>
-<img src="images/medium.png" alt="Fall back for IE">
-<![endif]-->
-</object>
-</div>
 
 <div class="slide">
   <header><h1 class="slash">Make fewer <br/>HTTP requests &amp;<br/>DNS lookups</h1></header>
@@ -630,21 +621,21 @@ A complex page means more bytes to download, and it also means slower DOM access
         <tr>
           <td rowspan=2><img src="images/computer.png" alt="computer" style="width: 250px"></td>
           <td class="telecom"><div></div></td>
-          <td><img src="images/telecom.png" alt="telecom italia"></td>
+          <td><img src="images/movistar.svg" alt="MoviStar" width="200"></td>
         </tr>
         <tr>
           <td class="telecom"><div></div></td>
-          <td><img src="images/bt.jpg" alt="BT Italia"></td>
+          <td><img src="images/vodafone.svg" alt="Vodafone"  width="200"></td>
         </tr>
       </table>
     </section>
 </div>
 
 
-
+<!--
 <div class="slide tweet tweetparent">
   <blockquote class="twitter-tweet" lang="en"><p>As ISPs promote ever faster download speeds, remember latency is the real performance killer <a href="https://twitter.com/search?q=%23perfmatters&amp;src=hash">#perfmatters</a> <a href="http://t.co/hfoYvHANQb">pic.twitter.com/hfoYvHANQb</a></p>&mdash; Andy Davies (@AndyDavies) <a href="https://twitter.com/AndyDavies/statuses/459716093993447424">April 25, 2014</a></blockquote>
-</div>
+</div> -->
 
 <div class="slide">
     <header>
@@ -966,7 +957,14 @@ el.addEventListener('touchend', myFunction);<b style="color:#900">*</b></pre>
   <img src="http://akamaicovers.oreilly.com/images/0636920018063/cat.gif" alt="HTML5: The Definitive Guide"/>
   <img src="http://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="MObile HTML5" />
   \<img src="http://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/></div>
+  <a href="https://twitter.com/EarthPix/status/529893883015344128">Photo credit: EarthPix</a>
 </section>
+</div>
+
+<div class="slide" style="background-color: rgba(255,255,255,0)">
+  <header><h1> <a href="https://twitter.com/EarthPix/status/529893883015344128">Photo: EarthPix</a></h1></header>
+    <section class="content">
+    </section>
 </div>
 
    </div>

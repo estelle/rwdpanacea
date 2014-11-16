@@ -10,7 +10,10 @@ body {
   height: 100%;
   position: absolute;
   left: 0px;
-  top: 0px; }
+  top: 0px;
+  background-color: #333;
+  background: url(../images/barcelona.png) no-repeat;
+  background-size: cover; }
 
 #presentation {
   position: absolute;
@@ -18,10 +21,7 @@ body {
   width: 100%;
   left: 0px;
   top: 0px;
-  overflow: hidden;
-  background-image: -webkit-linear-gradient(#b8c6df, #6d88b7);
-  background-image: linear-gradient(to top right, #b8c6df 0%, #6d88b7 100%);
-  background-size: 1%; }
+  overflow: hidden; }
 
 #next,
 #back {
@@ -29,19 +29,14 @@ body {
   position: absolute;
   top: 5px;
   left: 5px;
-  list-style-type: none;
-  -webkit-appearance: none;
   color: #333;
+  background-color: #ccc;
   font-size: 1rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(white 50%, #eeeeee 50%, #dddddd);
-  border-radius: 7px;
-  border: none;
+  border-radius: 3px;
   padding: 5px 10px;
   letter-spacing: 1px;
-  font-size: 1rem;
-  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3), 2px 2px 5px rgba(0, 0, 0, 0.7);
-  border: 3px solid #eee; }
+  font-size: 1rem; }
 
 #next {
   left: auto;
@@ -50,7 +45,6 @@ body {
 .slide {
   width: 900px;
   height: 700px;
-  background-color: #efefef;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -59,19 +53,13 @@ body {
   display: none;
   overflow: hidden;
   padding: 20px;
-  border-radius: 50px 0;
-  border: 5px solid #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), inset 0 0 6px rgba(0, 0, 0, 0.4);
   display: none;
   transition: margin-left 1s, transform 1s, opacity 2s;
   opacity: 0.5;
   transform: scale(0.8);
   box-sizing: border-box; }
-  .slide:nth-of-type(odd) {
-    border-radius: 0 50px; }
-    .slide:nth-of-type(odd) .objectlink {
-      border-radius: 0 45px 0 40px;
-      right: 6px; }
+  .slide .objectlink {
+    right: 0; }
 
 .past, .current, .future, .far-past, .far-future {
   display: block; }
@@ -85,21 +73,19 @@ body {
   left: 50%;
   top: 50%;
   margin-top: -350px;
-  background-color: #fff;
+  background-color: transparent;
   transition: all 0.25s ease-in-out;
   transform: scale(1);
   padding-left: 20px;
-  padding-top: 10px;
-  border-radius: 50px 0;
-  border: 5px solid #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), inset 0 0 6px rgba(0, 0, 0, 0.4); }
+  padding-top: 10px; }
   .slide.far-past {
     margin-left: -2400px; }
   .slide.past {
     margin-left: -1400px; }
   .slide.current {
     margin-left: -450px;
-    opacity: 1;
+    opacity: 0.95;
+    background-color: white;
     transform: scale(1); }
   .slide.future {
     margin-left: 500px; }
@@ -154,7 +140,6 @@ th {
 .slide img {
   max-height: 90%;
   border: 1px solid white;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
   text-align: center; }
 
 .slide p {
@@ -233,10 +218,9 @@ pre {
   -moz-border-radius: 8px;
   border-radius: 8px;
   border: 1px solid white; }
-  pre b {
-    font-weight: normal;
-    color: #c61800;
-    text-shadow: #c61800 0 0 1px; }
+  pre b, pre strong {
+    font-weight: strong;
+    color: #FFA500; }
 
 .floatright img {
   margin: 2px; }
@@ -255,7 +239,8 @@ cite:before {
   content: '-'; }
 
 a {
-  color: steelblue; }
+  color: #7a8090;
+  color: #FFA500; }
 
 .visibility {
   margin-top: 0; }
@@ -365,7 +350,7 @@ ol {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: steelblue;
+  background-color: #7a8090;
   color: #FFF;
   padding: 5px 20px;
   border-radius: 0 0 0 40px;
@@ -475,6 +460,20 @@ section td, section th {
   border: none;
   font-size: 30px;
   padding: 4px; }
+
+.telecom {
+  background-image: linear-gradient(to left, red, red);
+  width: 200px;
+  background-size: 100% 10px;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .telecom div {
+    height: 0;
+    width: 0;
+    border: 20px solid transparent;
+    border-left-color: #F00;
+    float: right;
+    margin-right: -30px; }
 
 @media print {
   .slide {

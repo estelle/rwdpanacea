@@ -2,7 +2,6 @@
 .slide {
   width: 900px;
   height: 700px;
-  background-color: #efefef;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -11,19 +10,12 @@
     display: none;
     overflow: hidden;
   padding: 20px;
-  border-radius: 50px 0;
-  border: 5px solid #fff;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6),
-        inset 0 0 6px rgba(0,0,0,0.4);
     display: none;
   transition: margin-left 1s, transform 1s, opacity 2s;
   opacity: 0.5;
   transform: scale(0.8);
   box-sizing: border-box;
-  &:nth-of-type(odd) {
-    border-radius: 0 50px;
-    .objectlink {border-radius: 0 45px 0 40px; right: 6px;}
-  }
+  .objectlink {right: 0;}
 }
 
 .past, .current, .future, .far-past, .far-future {
@@ -39,19 +31,15 @@
   left: 50%;
   top: 50%;
   margin-top: -350px;
-  background-color: #fff;
+  background-color: transparent;
   transition: all 0.25s ease-in-out;
   transform: scale(1);
   padding-left: 20px;
   padding-top: 10px;
-  border-radius: 50px 0;
-  border: 5px solid #fff;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6),
-        inset 0 0 6px rgba(0,0,0,0.4);
 
   &.far-past {margin-left: -2400px;}
   &.past     {margin-left: -1400px;}
-  &.current  {margin-left: -450px; opacity:1;
+  &.current  {margin-left: -450px; opacity:0.95; background-color: white;
     transform: scale(1);}
   &.future   {margin-left: 500px;}
   &.far-future {margin-left: 1500px;}
@@ -111,7 +99,6 @@ th {
 .slide img {
   max-height: 90%;
   border: 1px solid white;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
   text-align: center;
 }
 .slide p{

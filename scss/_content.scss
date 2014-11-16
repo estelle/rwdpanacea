@@ -47,10 +47,9 @@ pre {
   -moz-border-radius: 8px;
   border-radius: 8px;
   border: 1px solid white;
-  b {
-    font-weight: normal;
-    color: #c61800;
-    text-shadow: #c61800 0 0 1px;
+  b, strong {
+    font-weight: strong;
+    color: #FFA500;
   }
 }
 
@@ -63,7 +62,9 @@ pre {
 }
 cite {text-align: right; display: block; margin-top: 1rem;}
 cite:before {content: '-';}
-a {color: steelblue;}
+a {
+    color: rgb(122,128,144);
+    color: #FFA500;}
 .visibility {
   margin-top: 0;
 }
