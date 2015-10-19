@@ -281,7 +281,8 @@ ol {
   border: 1px solid; }
 
 .object.resize:hover object {
-  -webkit-animation-play-state: paused; }
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused; }
 
 .object.resize .img {
   -webkit-animation: resize_clip infinite 8s 2s linear alternate paused backwards;
@@ -294,7 +295,8 @@ ol {
 
 .current.object.resize .img,
 .current.object.resize object {
-  -webkit-animation-play-state: running; }
+  -webkit-animation-play-state: running;
+  animation-play-state: running; }
 
 @-webkit-keyframes resize {
   0%, 30% {
