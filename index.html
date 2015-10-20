@@ -8,7 +8,7 @@ Made by: Put Your Name Here
 Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 Based on: http://estelle.github.com/rwdpanacea
 -->
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/visa.css">
 <meta name="twitter:widgets:link-color" content="#4682B4">
 <meta name="twitter:widgets:theme" content="light">
 <style>
@@ -59,10 +59,11 @@ Based on: http://estelle.github.com/rwdpanacea
 
 
 <div class="slide">
-  <header><h1></h1></header>
+  <header><h1 style="text-align: center;">Device Fragmentation</h1></header>
     <section class="content">
-<img src="img/android.svg">
-<a href="http://opensignal.com/reports/fragmentation.php">OpenSignal.com</a>
+
+<img src="img/android.png" style="width: 100%;">
+<a href="http://opensignal.com/reports/2015/08/android-fragmentation/">OpenSignal.com</a>
     </section>
 </div>
 
@@ -143,51 +144,6 @@ Responsive design is an approach to web page creation that makes use of flexible
 </div>
 
 
-
-
-
-<!-- mediaqueri.es -->
- <div class="slide" style="padding:0; overflow:hidden;">
-<object data="http://mediaqueri.es/" style="height: 780px;
-width: 940px;
-overflow:hidden; ">
-     </object>
-  <a href="http://mediaqueri.es/" target="play" class="objectlink">MediaQueri.es</a>
-</div>
-<!--
-<div class="slide object resize">
-  <object data="http://alistapart.com/"></object>
-  <a href="http://alistapart.com/" target="play" class="objectlink">Open in separate window</a>
-</div>
-
-<div class="slide">
-  <header><h1>Slower Network</h1></header>
-    <section class="content">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Wide / Desktop</th>
-            <th>Narrow / Mobile</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Requests</td>
-            <td>43</td>
-            <td>41</td>
-          </tr>
-          <tr>
-            <td>Assets</td>
-            <td>769Kb</td>
-            <td>808Kb</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-</div>
-
--->
 
 <div class="slide object resize">
   <object data="http://disney.com/"></object>
@@ -344,10 +300,10 @@ overflow:hidden; ">
 <div class="slide">
   <header><h1>Size matters</h1></header>
     <section class="content">
-      <h1 style="text-align: center; font-size: 5rem; text-shadow: 5px 5px 0 orange">274%</h1>
-      <p>According to the HTTP Archive, the average top 1,000 web page is <a href="http://httparchive.org/interesting.php">1,925 KB</a>, compared to <a href="http://httparchive.org/interesting.php?a=All&l=Sep%201%202011">702 KB in 2010</a>.</p>
+      <h1 style="text-align: center; font-size: 5rem; text-shadow: 5px 5px 0 orange">281%</h1>
+      <p>According to the HTTP Archive, the average top 1,000 web page is <a href="http://httparchive.org/interesting.php">1,976 KB</a>, compared to <a href="">702 KB in 2010</a>.</p>
 
-<p class="resources"><a href="http://httparchive.org/interesting.php">HTTPArchive</a><br/>Images: 1206 KB v. 416 KB<br/>JS: 305 KB v. 113 KB</p>
+<p class="resources"><a href="http://httparchive.org/compare.php?&r1=Oct%201%202015&s1=All&r2=Nov%2015%202010&s2=All">HTTPArchive</a><br/>Images: 1245 KB v. 416 KB (v. 76KB)<br/>JS: 332 KB v. 113 KB (v. 342KB)<br/>CSS: 70KB v. 25KB (v. 81KB)</p>
     </section>
 </div>
 
@@ -360,23 +316,24 @@ overflow:hidden; ">
     Youtube Feathers:<br/>Regular:  &nbsp;58 requests/1200 kB<br/>Feathers: 14 requests/100 kB</p>
 </div>
 
-<!--<div class="slide tweet">
-  <blockquote class="twitter-tweet" lang="en"><p>Just because no one uses your mobile site, doesn&#39;t mean you don&#39;t need to improve it. Maybe no one uses it because the experience sucks.</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/statuses/464131932133945344">May 7, 2014</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>-->
-
 <div class="slide">
   <header><h1>TL;DR;</h1></header>
     <section class="content"><p>By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
     </section>
 </div>
 
+<div class="slide tweet">
+  <blockquote class="twitter-tweet" lang="en"><p>Just because no one visits your mobile site doesn't mean you don't need to improve it. Maybe no one uses it because its too slow.</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/status/655052815862231040">October 16, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
+
+<!--
 <div class="slide" style="background-image: url(images/weightperf.jpg); background-repeat: no-repeat; background-position: center; background-size: contain">
   <header><h1>Duh!</h1></header>
     <section class="content">
     </section>
-</div>
+</div>-->
 
 <div class="slide">
   <header><h1></h1></header>
@@ -511,10 +468,10 @@ A complex page means more bytes to download, and it also means slower DOM access
         </li>
         <li>Only load the size you need
           <ul>
-            <li>&lt;picture></li>
+            <li>&lt;picture> (Edge 13, FF, Chrome, O, Android 44)</li>
+            <li>&lt;img srcset> (Edge, all, not IE [<a href="https://www.webkit.org/blog/2910/improved-support-for-high-resolution-displays-with-the-srcset-image-attribute/">1</a>, <a href="http://dev.opera.com/blog/opera-21/">2</a>])</li>
+            <li><a href="https://github.com/scottjehl/picturefill">picturefill</a></li>
             <li>Clowncar technique</li>
-            <li>&lt;img srcset> (in <a href="https://www.webkit.org/blog/2910/improved-support-for-high-resolution-displays-with-the-srcset-image-attribute/">Safari</a>, <a href="http://dev.opera.com/blog/opera-21/">Opera 21</a>, Chrome 34)</li>
-            <li> (and picturefill)</li>
           </ul>
 
         </li>
@@ -601,9 +558,9 @@ A complex page means more bytes to download, and it also means slower DOM access
       <table>
         <tr><th>auto</th><th>cover</th><th>contain</th></tr>
         <tr>
-          <td><img src="images/barcelona.png" style="width: 250px"></td>
-          <td><img src="images/barcelona.png" style="width: 250px"></td>
-          <td><img src="images/barcelona.png" style="width: 250px"></td>
+          <td><img src="images/visa.jpg" style="width: 250px"></td>
+          <td><img src="images/visa.jpg" style="width: 250px"></td>
+          <td><img src="images/visa.jpg" style="width: 250px"></td>
         </tr>
         <tr>
           <td><img src="images/auto.gif" alt="auto"></td>
@@ -720,6 +677,10 @@ A complex page means more bytes to download, and it also means slower DOM access
   <blockquote class="twitter-tweet" lang="en"><p>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</p>&mdash; Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/statuses/463069042182332416">May 4, 2014</a></blockquote>
 </div>
 
+<div class="slide tweet">
+  <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">If your web app makes your laptop fan go crazy, imagine what your app is doing to the batteries and CPU of your mobile visitors.</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/status/655613169763651585">October 18, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
 
 <div class="slide">
@@ -788,7 +749,7 @@ development, but increase energy use.</li>
     </div>
 
 
-
+<!--
 <div class="slide resizeimg">
   <header><h1>CSS Animation, not JavaScript</h1></header>
     <section class="content">
@@ -801,7 +762,7 @@ development, but increase energy use.</li>
     <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
 
     </section>
-</div>
+</div> -->
 
 <div class="slide">
  <header><h1>Memory</h1></header>
@@ -971,15 +932,13 @@ el.addEventListener('touchend', myFunction);<b style="color:#900">*</b></pre>
   <img src="http://akamaicovers.oreilly.com/images/0636920018063/cat.gif" alt="HTML5: The Definitive Guide"/>
   <img src="http://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="MObile HTML5" />
   \<img src="http://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/></div>
-  <a href="https://twitter.com/EarthPix/status/529893883015344128">Photo credit: EarthPix</a>
 </section>
 </div>
 
-<div class="slide" style="background-color: rgba(255,255,255,0)">
-  <header><h1> <a href="https://twitter.com/EarthPix/status/529893883015344128">Photo: EarthPix</a></h1></header>
-    <section class="content">
-    </section>
+<div class="slide normal" style="background: transparent">
+
 </div>
+
 
    </div>
 </div>
